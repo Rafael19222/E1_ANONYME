@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebCraft Solutions - Portail</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="accueil">
+  <header class="header">
+    <a class="logo" href="index.html" aria-label="WebCraft Solutions, accueil">WebCraft Solutions</a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="#projets">Projets</a>
+      <a href="#formations">Formations</a>
+      <a href="inscription.html">Inscription</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="accueil">
+      <h1>Interfaces web </h1>
+      <p>Nos projets et nos formations</p>
+    </section>
+    <section class="section" id="projets">
+      <h2>Nos projets clients</h2>
+      <p class="loader" id="p-loader" role="status">Chargement des projets</p>
+      <p class="erreur" id="p-erreur" role="alert" hidden>Impossible de charger</p>
+      <div id="p-contenu" hidden>
+        <div class="filtres" role="search">
+          <input type="search" id="p-recherche" placeholder="Rechercher un projet" aria-label="Rechercher un projet">
+          <select id="p-tech" aria-label="Filtrer par technologie"><option value="">Les technologies</option></select>
+          <select id="p-cat" aria-label="Filtrer par catégorie"><option value="">Les catégories</option></select>
+        </div>
+        <div class="grille" id="p-grille"></div>
+      </div>
+    </section>
+    <section class="section section--alt" id="formations">
+      <h2>Catalogue de formations</h2>
+      <p class="loader" id="f-loader" role="status">Chargement des formations</p>
+      <p class="erreur" id="f-erreur" role="alert" hidden>Impossible de charger</p>
+      <div id="f-contenu" hidden>
+        <div class="filtres" role="search">
+          <input type="search" id="f-recherche" placeholder="Rechercher une formation" aria-label="Rechercher une formation">
+          <select id="f-cat" aria-label="Filtrer par catégorie"><option value="">Les catégories</option></select>
+          <select id="f-niveau" aria-label="Filtrer par niveau"><option value="">Les niveaux</option></select>
+          <select id="f-tech" aria-label="Filtrer par technologie"><option value="">Les technologies</option></select>
+        </div>
+        <div class="grille" id="f-grille"></div>
+      </div>
+    </section>
+  </main>
+  <div class="modal" id="modal" hidden>
+    <div class="modal__boite" role="dialog" aria-modal="true" aria-label="Détails">
+      <button class="modal__fermer" id="modal-fermer" type="button" aria-label="Fermer">&#10005;</button>
+      <div id="modal-contenu"></div>
+    </div>
+  </div>
+  <footer class="footer">
+    <p>&copy; 2026 WebCraft Solutions</p>
+    <p>
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://x.com" target="_blank" rel="noopener noreferrer">X</a>
+    </p>
+  </footer>
+</body>
+</html>

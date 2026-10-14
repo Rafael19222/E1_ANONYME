@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inscription - WebCraft Solutions</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="inscription">
+  <header class="header">
+    <a class="logo" href="index.html" aria-label="WebCraft Solutions, accueil">WebCraft Solutions</a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#projets">Projets</a>
+      <a href="index.html#formations">Formations</a>
+      <a href="inscription.html">Inscription</a>
+    </nav>
+  </header>
+
+  <main class="section section--formulaire">
+    <h1>Inscription à une formation en ligne </h1>
+    <p class="loader" id="i-loader" role="status">Chargement des formation</p>
+    <p class="erreur" id="i-erreur" role="alert" hidden>Impossible de charger nos formations</p>
+
+    <form id="formulaire" novalidate hidden>
+      <div class="champ">
+        <label for="prenom">Prénom *</label>
+        <input type="text" id="prenom" name="prenom" autocomplete="given-name">
+        <p class="champ__erreur" id="prenom-erreur"></p>
+      </div>
+      <div class="champ">
+        <label for="nom">Nom *</label>
+        <input type="text" id="nom" name="nom" autocomplete="family-name">
+        <p class="champ__erreur" id="nom-erreur"></p>
+      </div>
+      <div class="champ">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" autocomplete="email">
+        <p class="champ__erreur" id="email-erreur"></p>
+      </div>
+      <div class="champ">
+        <label for="telephone">Téléphone (format international) *</label>
+        <input type="tel" id="telephone" name="telephone" placeholder="+33 6 12 34 56 78" autocomplete="tel">
+        <p class="champ__erreur" id="telephone-erreur"></p>
+      </div>
+      <div class="champ">
+        <label for="formation">Formation *</label>
+        <select id="formation" name="formation">
+          <option value="">Choisir une formation</option>
+        </select>
+        <p class="champ__erreur" id="formation-erreur"></p>
+      </div>
+      <div class="champ">
+        <label for="niveau">Niveau *</label>
+        <select id="niveau" name="niveau">
+          <option value="">Choisir un niveau</option>
+          <option value="Débutant">Débutant</option>
+          <option value="Intermédiaire">Intermédiaire</option>
+          <option value="Avancé">Avancé</option>
+        </select>
+        <p class="champ__erreur" id="niveau-erreur"></p>
+      </div>
+      <div class="champ">
+        <label for="motivation">Motivation * (50 caractères minimum)</label>
+        <textarea id="motivation" name="motivation" rows="5"></textarea>
+        <p class="champ__erreur" id="motivation-erreur"></p>
+      </div>
+      <div class="champ">
+        <label for="entreprise">Entreprise (facultatif)</label>
+        <input type="text" id="entreprise" name="entreprise" autocomplete="organization">
+      </div>
+      <div class="champ">
+        <label for="experience">Expérience en années (facultatif)</label>
+        <input type="number" id="experience" name="experience" min="0">
+      </div>
+      <button class="btn" type="submit">Envoyer mon inscription</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 WebCraft Solutions</p>
+    <p>
+      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://x.com" target="_blank" rel="noopener noreferrer">X</a>
+    </p>
+  </footer>
+</body>
+</html>
